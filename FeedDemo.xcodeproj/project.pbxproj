@@ -17,6 +17,7 @@
 		55FE2407219CBBA00031DBF5 /* FeedViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55FE2406219CBBA00031DBF5 /* FeedViewModel.swift */; };
 		55FE2409219CBC420031DBF5 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55FE2408219CBC420031DBF5 /* Post.swift */; };
 		55FE240B219CCAB50031DBF5 /* BetterFeedCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 55FE240A219CCAB50031DBF5 /* BetterFeedCell.xib */; };
+		55FE240D219CE2900031DBF5 /* BetterFeedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55FE240C219CE2900031DBF5 /* BetterFeedCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		55FE2406219CBBA00031DBF5 /* FeedViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewModel.swift; sourceTree = "<group>"; };
 		55FE2408219CBC420031DBF5 /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		55FE240A219CCAB50031DBF5 /* BetterFeedCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BetterFeedCell.xib; sourceTree = "<group>"; };
+		55FE240C219CE2900031DBF5 /* BetterFeedCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BetterFeedCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +85,7 @@
 				55FE2406219CBBA00031DBF5 /* FeedViewModel.swift */,
 				55FE2408219CBC420031DBF5 /* Post.swift */,
 				55FE240A219CCAB50031DBF5 /* BetterFeedCell.xib */,
+				55FE240C219CE2900031DBF5 /* BetterFeedCell.swift */,
 			);
 			path = Feed;
 			sourceTree = "<group>";
@@ -161,6 +164,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				55FE23F2219CA1A70031DBF5 /* ViewController.swift in Sources */,
+				55FE240D219CE2900031DBF5 /* BetterFeedCell.swift in Sources */,
 				55FE23F0219CA1A70031DBF5 /* AppDelegate.swift in Sources */,
 				55FE2407219CBBA00031DBF5 /* FeedViewModel.swift in Sources */,
 				55FE2405219CB8960031DBF5 /* FeedCell.swift in Sources */,
