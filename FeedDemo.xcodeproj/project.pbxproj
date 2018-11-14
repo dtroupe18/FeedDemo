@@ -12,6 +12,11 @@
 		55FE23F5219CA1A70031DBF5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 55FE23F3219CA1A70031DBF5 /* Main.storyboard */; };
 		55FE23F7219CA1A90031DBF5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 55FE23F6219CA1A90031DBF5 /* Assets.xcassets */; };
 		55FE23FA219CA1A90031DBF5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 55FE23F8219CA1A90031DBF5 /* LaunchScreen.storyboard */; };
+		55FE2403219CA40F0031DBF5 /* FeedCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 55FE2402219CA40F0031DBF5 /* FeedCell.xib */; };
+		55FE2405219CB8960031DBF5 /* FeedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55FE2404219CB8960031DBF5 /* FeedCell.swift */; };
+		55FE2407219CBBA00031DBF5 /* FeedViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55FE2406219CBBA00031DBF5 /* FeedViewModel.swift */; };
+		55FE2409219CBC420031DBF5 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55FE2408219CBC420031DBF5 /* Post.swift */; };
+		55FE240B219CCAB50031DBF5 /* BetterFeedCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 55FE240A219CCAB50031DBF5 /* BetterFeedCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +27,11 @@
 		55FE23F6219CA1A90031DBF5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		55FE23F9219CA1A90031DBF5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		55FE23FB219CA1A90031DBF5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		55FE2402219CA40F0031DBF5 /* FeedCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FeedCell.xib; sourceTree = "<group>"; };
+		55FE2404219CB8960031DBF5 /* FeedCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedCell.swift; sourceTree = "<group>"; };
+		55FE2406219CBBA00031DBF5 /* FeedViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewModel.swift; sourceTree = "<group>"; };
+		55FE2408219CBC420031DBF5 /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
+		55FE240A219CCAB50031DBF5 /* BetterFeedCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BetterFeedCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +64,7 @@
 		55FE23EE219CA1A70031DBF5 /* FeedDemo */ = {
 			isa = PBXGroup;
 			children = (
+				55FE2401219CA3FD0031DBF5 /* Feed */,
 				55FE23EF219CA1A70031DBF5 /* AppDelegate.swift */,
 				55FE23F1219CA1A70031DBF5 /* ViewController.swift */,
 				55FE23F3219CA1A70031DBF5 /* Main.storyboard */,
@@ -62,6 +73,18 @@
 				55FE23FB219CA1A90031DBF5 /* Info.plist */,
 			);
 			path = FeedDemo;
+			sourceTree = "<group>";
+		};
+		55FE2401219CA3FD0031DBF5 /* Feed */ = {
+			isa = PBXGroup;
+			children = (
+				55FE2402219CA40F0031DBF5 /* FeedCell.xib */,
+				55FE2404219CB8960031DBF5 /* FeedCell.swift */,
+				55FE2406219CBBA00031DBF5 /* FeedViewModel.swift */,
+				55FE2408219CBC420031DBF5 /* Post.swift */,
+				55FE240A219CCAB50031DBF5 /* BetterFeedCell.xib */,
+			);
+			path = Feed;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -123,7 +146,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				55FE23FA219CA1A90031DBF5 /* LaunchScreen.storyboard in Resources */,
+				55FE2403219CA40F0031DBF5 /* FeedCell.xib in Resources */,
 				55FE23F7219CA1A90031DBF5 /* Assets.xcassets in Resources */,
+				55FE240B219CCAB50031DBF5 /* BetterFeedCell.xib in Resources */,
 				55FE23F5219CA1A70031DBF5 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -137,6 +162,9 @@
 			files = (
 				55FE23F2219CA1A70031DBF5 /* ViewController.swift in Sources */,
 				55FE23F0219CA1A70031DBF5 /* AppDelegate.swift in Sources */,
+				55FE2407219CBBA00031DBF5 /* FeedViewModel.swift in Sources */,
+				55FE2405219CB8960031DBF5 /* FeedCell.swift in Sources */,
+				55FE2409219CBC420031DBF5 /* Post.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
