@@ -20,7 +20,7 @@ class ViewController: UIViewController {
     super.viewDidLoad()
     addBackgroundGradient()
     viewModel.loadPosts()
-    let nib = UINib.init(nibName: "FeedCell", bundle: nil)
+    let nib = UINib.init(nibName: "BetterFeedCell", bundle: nil)
     tableView.register(nib, forCellReuseIdentifier: "cell")
     tableView.backgroundColor = UIColor.clear
     tableView.separatorStyle = .none
@@ -43,27 +43,32 @@ class ViewController: UIViewController {
 
 extension ViewController: UITableViewDataSource {
   func numberOfSections(in tableView: UITableView) -> Int {
-    return 1
+    return viewModel.numberOfSections()
   }
   
   func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-    return viewModel.numberOfRows()
+    return viewModel.numberOfRows(forSection: section)
     // return data.count
   }
   
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-    let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! FeedCell
+    let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! BetterFeedCell
     cell.configure(from: viewModel.post(forIndexPath: indexPath))
+    
+    cell.replyTapAction = { [weak self] (UITableViewCell) in
+      self?.viewModel.expandPost(at: indexPath.section)
+      self?.tableView.reloadSections(IndexSet(integer: indexPath.section), with: .automatic)
+    }
     
 //    let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
 //    cell.textLabel?.text = data[indexPath.row]
     
     // cell.frame = CGRect(x: 0, y: 0, width: tableView.frame.size.width, height: cell.frame.size.height)
 
-    cell.layer.borderWidth = 1.0
-    cell.layer.borderColor = UIColor.black.cgColor
-    cell.layer.cornerRadius = 8
-
+    // cell.layer.borderWidth = 1.0
+    // cell.layer.borderColor = UIColor.black.cgColor
+    // cell.layer.cornerRadius = 8
+  
     return cell
   }
 }

@@ -25,18 +25,7 @@ class FeedCell: UITableViewCell {
   override func setSelected(_ selected: Bool, animated: Bool) {
     super.setSelected(selected, animated: animated)
   }
-  
-//  override var frame: CGRect {
-//    get {
-//      return super.frame
-//    }
-//    set (newFrame) {
-//      var frame = newFrame
-//      frame.origin.x += 20
-//      super.frame = frame
-//    }
-//  }
-  
+    
   func configure(from post: Post) {
     configureCellAppearance()
     self.userImageView.image = post.image

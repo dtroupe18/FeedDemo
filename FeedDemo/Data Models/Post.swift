@@ -15,12 +15,14 @@ struct Post {
   let postText: String
   var comments: [Post]
   
-  var isComment: Bool = false // do something with this for indentation and shit add to constructor
+  var isComment: Bool
+  var isExpanded: Bool = false
   
-  init(userName: String, postText: String, comments: [Post]) {
+  init(userName: String, postText: String, comments: [Post], isComment: Bool) {
     self.userName = userName
     self.postText = postText
     self.comments = comments
+    self.isComment = isComment
     self.image = UIImage(named: "UserIcon")
   }
 }

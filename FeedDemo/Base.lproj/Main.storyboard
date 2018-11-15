@@ -23,14 +23,14 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="QZn-6G-RTX">
-                                <rect key="frame" x="20" y="20" width="335" height="647"/>
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" id="9lw-oI-JKX">
-                                        <rect key="frame" x="0.0" y="28" width="335" height="44"/>
+                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="9lw-oI-JKX" id="rYV-Tw-anO">
-                                            <rect key="frame" x="0.0" y="0.0" width="335" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -41,9 +41,9 @@
                         <constraints>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Eyh-8n-SIJ" secondAttribute="bottom" id="7bq-Tp-zsb"/>
                             <constraint firstItem="Eyh-8n-SIJ" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="U35-FJ-nXe"/>
-                            <constraint firstItem="QZn-6G-RTX" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="aNb-IO-XMO"/>
+                            <constraint firstItem="QZn-6G-RTX" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="aNb-IO-XMO"/>
                             <constraint firstItem="Eyh-8n-SIJ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="e3y-ma-yZP"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="QZn-6G-RTX" secondAttribute="trailing" constant="20" id="eNN-qp-w46"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="QZn-6G-RTX" secondAttribute="trailing" id="eNN-qp-w46"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Eyh-8n-SIJ" secondAttribute="trailing" id="hnB-C0-6YM"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="QZn-6G-RTX" secondAttribute="bottom" id="kNY-ZP-TXQ"/>
                             <constraint firstItem="QZn-6G-RTX" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="qbc-Xy-RE7"/>
@@ -52,7 +52,7 @@
                     </view>
                     <connections>
                         <outlet property="layerView" destination="Eyh-8n-SIJ" id="AJE-SS-cpM"/>
-                        <outlet property="tableView" destination="QZn-6G-RTX" id="5k4-lV-veP"/>
+                        <outlet property="tableView" destination="QZn-6G-RTX" id="b99-kU-FVa"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
