@@ -1,60 +1,43 @@
 //
-//  BetterFeedCell.swift
+//  NewFeedCell.swift
 //  FeedDemo
 //
-//  Created by David Troupe on 11/14/18.
+//  Created by David Troupe on 11/19/18.
 //  Copyright © 2018 David Troupe. All rights reserved.
 //
 
 import UIKit
 
-class BetterFeedCell: UITableViewCell {
+class NewFeedCell: UICollectionViewCell {
+  
+  @IBOutlet weak var leftIndentationConstraint: NSLayoutConstraint!
+  private var originalLeftIndentation: CGFloat?
   
   @IBOutlet weak var invisibleBackgroundView: UIView!
   @IBOutlet weak var visibleBackgroundView: UIView!
-  @IBOutlet weak var leftIndentationConstraint: NSLayoutConstraint!
-  var originalLeftIndentation: CGFloat?
+  
   
   @IBOutlet weak var userImageView: UIImageView!
   @IBOutlet weak var usernameLabel: UILabel!
-  @IBOutlet weak var postTextLabel: UILabel!
   
+  @IBOutlet weak var lineView: UIView!
+  
+  @IBOutlet weak var buttonStackView: UIStackView!
   @IBOutlet weak var cheerButton: UIButton!
-  @IBOutlet weak var replyButton: UIButton!
+  @IBOutlet weak var replyButoon: UIButton!
   
-  var replyTapAction: ((UITableViewCell) -> Void)?
+  @IBOutlet weak var postTextLabel: UILabel!
   
   override func awakeFromNib() {
     super.awakeFromNib()
-    self.backgroundColor = UIColor.clear
-    self.selectionStyle = .none
+    backgroundColor = UIColor.clear
     invisibleBackgroundView.backgroundColor = UIColor.clear
     visibleBackgroundView.backgroundColor = UIColor(red: 1, green: 1, blue: 1, alpha: 0.95)
     visibleBackgroundView.layer.cornerRadius = 8
     
-    // Need to add another view to create the border
-    //
-    // visibleBackgroundView.layer.borderWidth = 1
-    // visibleBackgroundView.layer.borderColor = UIColor.black.cgColor
-    
-    // visibleBackgroundView.defaultShadow()
-    
     userImageView.layer.cornerRadius = userImageView.frame.width/2
     userImageView.clipsToBounds = true
     originalLeftIndentation = leftIndentationConstraint.constant
-    
-    // visibleBackgroundView.bringSubviewToFront(userImageView)
-    
-  }
-  
-  @IBAction func replyTapped(_ sender: Any) {
-    if sender is UIButton {
-      replyTapAction?(self)
-    }
-  }
-  
-  override func setSelected(_ selected: Bool, animated: Bool) {
-    super.setSelected(selected, animated: animated)
   }
   
   func configure(from post: Post) {
@@ -72,5 +55,14 @@ class BetterFeedCell: UITableViewCell {
       leftIndentationConstraint.constant = baseIndentation
     }
   }
+  
+  @IBAction func replyPressed(_ sender: Any) {
+    print("reply pressed")
+  }
+  
+  @IBAction func cheerPressed(_ sender: Any) {
+    print("Cheer pressed")
+  }
+  
   
 }

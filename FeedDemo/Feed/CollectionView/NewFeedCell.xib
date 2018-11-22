@@ -12,7 +12,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="BetterFeedCell" customModule="FeedDemo" customModuleProvider="target">
+        <view contentMode="scaleToFill" id="iN0-l3-epB" userLabel="NewFeedCell" customClass="NewFeedCell" customModule="FeedDemo" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="375" height="177"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
@@ -48,12 +48,15 @@
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QtE-Vp-7XY">
                                             <rect key="frame" x="0.0" y="0.0" width="151" height="28"/>
                                             <state key="normal" title="Cheer"/>
+                                            <connections>
+                                                <action selector="cheerPressed:" destination="iN0-l3-epB" eventType="touchUpInside" id="t80-wW-t7s"/>
+                                            </connections>
                                         </button>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wjm-5W-KeT">
                                             <rect key="frame" x="151" y="0.0" width="151" height="28"/>
                                             <state key="normal" title="Reply"/>
                                             <connections>
-                                                <action selector="replyTapped:" destination="iN0-l3-epB" eventType="touchUpInside" id="O1r-Q2-FBd"/>
+                                                <action selector="replyPressed:" destination="iN0-l3-epB" eventType="touchUpInside" id="iE8-iA-yJR"/>
                                             </connections>
                                         </button>
                                     </subviews>
@@ -61,7 +64,7 @@
                                         <constraint firstAttribute="height" constant="28" id="9VC-3o-1e6"/>
                                     </constraints>
                                 </stackView>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Post Text" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sna-uS-WDi">
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Post Text" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sna-uS-WDi">
                                     <rect key="frame" x="34" y="33" width="302" height="67"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                     <nil key="textColor"/>
@@ -107,14 +110,16 @@
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <connections>
-                <outlet property="cheerButton" destination="QtE-Vp-7XY" id="llm-jQ-nZv"/>
-                <outlet property="invisibleBackgroundView" destination="8w8-RO-TTy" id="CkY-nJ-mUq"/>
-                <outlet property="leftIndentationConstraint" destination="1Fi-07-bzx" id="o3r-4W-THt"/>
-                <outlet property="postTextLabel" destination="Sna-uS-WDi" id="mGN-e7-2jJ"/>
-                <outlet property="replyButton" destination="wjm-5W-KeT" id="fNS-9D-E5t"/>
-                <outlet property="userImageView" destination="Kks-LZ-kgR" id="3G2-6n-hOA"/>
-                <outlet property="usernameLabel" destination="Ioi-4j-vVc" id="y0m-EL-jYy"/>
-                <outlet property="visibleBackgroundView" destination="m0X-dm-GvB" id="H4c-f2-GwD"/>
+                <outlet property="buttonStackView" destination="U4r-1C-qQU" id="mok-hY-YGd"/>
+                <outlet property="cheerButton" destination="QtE-Vp-7XY" id="0pm-H6-aW5"/>
+                <outlet property="invisibleBackgroundView" destination="8w8-RO-TTy" id="fcG-0N-hO9"/>
+                <outlet property="leftIndentationConstraint" destination="1Fi-07-bzx" id="1l2-bB-UE7"/>
+                <outlet property="lineView" destination="07a-sO-4je" id="QW3-iy-hEP"/>
+                <outlet property="postTextLabel" destination="Sna-uS-WDi" id="Geo-Z6-2nB"/>
+                <outlet property="replyButoon" destination="wjm-5W-KeT" id="Nwj-pS-1c0"/>
+                <outlet property="userImageView" destination="Kks-LZ-kgR" id="5Ug-sQ-NhJ"/>
+                <outlet property="usernameLabel" destination="Ioi-4j-vVc" id="8s6-iA-dsg"/>
+                <outlet property="visibleBackgroundView" destination="m0X-dm-GvB" id="n6c-ge-hbN"/>
             </connections>
             <point key="canvasLocation" x="2.3999999999999999" y="-172.26386806596702"/>
         </view>
